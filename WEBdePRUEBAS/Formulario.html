@@ -1,0 +1,89 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header>
+            
+            <h1>Mi Formulario</h1>
+            <nav class="menu superior">
+                <a href="formulario.html" class="boton-inicio">Inicio</a>
+                <a href="formulario.html" class="Sobre mi"></a>Sobre mi</a>
+                <a href="formulario.html" class="Contacto"></a>Contacto</a>
+            </nav>
+                </ul>
+            </nav>
+            <p>Bienvenido a mi formulario</p>
+        </header>
+        <main>
+            <form> <h2>Formulario de contacto</h2>
+              <fieldset>
+                <legend>Datos personales</legend>
+                     <label for="nombre">Nombre:</label>
+                     <input type="password" id="nombre" name="nombre" required><br>
+                     <label for="apellido">Apellido:</label>
+                     <input type="text" id="apellido" name="apellido" required><br>
+                     <label for="email">Email:</label>
+                     <input type="email" id="email" name="email" required><br>
+                     <label for="telefono">Teléfono:</label>
+                     <input type="tel" id="telefono" name="telefono" required><br>
+                     <label for="pagina-web">Página web:</label>
+                     <input type="url" id="pagina-web" name="pagina-web" required><br>
+                     <label for=" Buscar">Buscar:</label>
+                     <input type="text" id=" Buscar" name=" Buscar" required><br>
+              </fieldset>
+              <fieldset>
+                <legend>Fecha y hora</legend>
+                     <label for="Fecha">Fecha:</label>
+                     <input type="date" id="Fecha" name="Fecha" required><br>
+
+
+                     <label for="Hora">Hora:</label>
+                     <input type="time" id="Hora" name="Hora" required><br>
+              </fieldset>
+              <fieldset>
+                <legend>Valores numericos</legend>
+                     <label for="edad">Edad:</label>
+                     <input type="number" id="edad" name="edad" min="0" max="120" required><br>
+
+
+                     <label for="valor">Nivel:</label>
+                     <input type="range" id="valor" name="valor" min="0" max="100" required><br>
+                     <label for="color">Color:</label>
+                     <input type="color" id="color" name="color" required><br>
+              </fieldset>
+              <fieldset>
+                <legend>Opciones</legend>
+                     <label for="opcion1">Si</label>
+                     <input type="checkbox" id="opcion1" name="opcion1"><br>
+                     <label for="opcion2">No</label>
+                     <input type="checkbox" id="opcion2" name="opcion2"><br>
+                     <label for="opcion3">Tal vez</label>
+                     <input type="checkbox" id="opcion3" name="opcion3"><br>
+                    
+                    <p>Seleccione sus aficiones:</p>
+                     <label for="archivo">Archivo:</label>
+                     <input type="file" id="archivo" name="archivo" required><br>
+              </fieldset>
+                <fieldset>
+                <legend>Texto</legend>
+                <label for="Comentarios">Comentarios:</label>
+                <textarea id="Comentarios" name="Comentarios" rows="2" cols="50"></textarea>
+                </fieldset>
+                <fieldset>
+                <legend>Enviar</legend>
+                <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+
+        </main>
+        
+        <footer>
+            <p>Derechos reservados &copy; 2026</p>
+        </footer>
+    </body>
+</html>

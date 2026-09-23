@@ -1,0 +1,38 @@
+header {
+    background-color: #176ddd7e;
+    padding: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #127c5c;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background-color: #c9dd177e;
+    color: rgba(8, 4, 4, 0);
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.fdh{
+    background-color: #eb0b037e;
+
+}

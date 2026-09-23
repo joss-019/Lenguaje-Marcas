@@ -1,0 +1,72 @@
+header {
+    background-color: #176ddd7e;
+    padding: 20px;
+    text-align: center;
+    font: size 50px;;
+}
+
+main {
+    padding: 20px;
+}
+
+form fieldset {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: inline-block;
+    min-width: 110px;
+    margin-bottom: 12px;
+}
+
+form input {
+    margin-bottom: 12px;
+}
+
+form label[for="Comentarios"] {
+    vertical-align: top;
+}
+
+footer {
+    background-color: #127c5c;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background-color: #c9dd177e;
+    color: rgba(8, 4, 4, 0);
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.fdh{
+    background-color: #eb0b037e;
+
+
+}
+
+.legend {
+    background-color: #b3e00d;
+ 
+}
+.boton-inicio{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #03060a7e;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    front-size: 16px;
+}
