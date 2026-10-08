@@ -4,48 +4,52 @@
     <title>Calculadora</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="CalculadoraEstilo.css">
-
+    <script src="Calculadora.js"></script>
 </head>
+<header>
+    <h1>Calculadora</h1>
+</header>
 <body>
 <main class="Calculadora">
     
     <table>
         <tr>
-            <td colspan="5">
-                <input type="text" id="resultado" disabled>
+            <td colspan="4">
+                <input type="text" id="pantalla" readonly>
             </td>
         </tr>
         <tr>
-            <td><button onclick="1"()>1</button></td>
-            <td><button onclick="2"()>2</button></td>
-            <td><button onclick="3"()>3</button></td>
-    
-
-        </tr>
-
-        <tr>
-            <td><button onclick="4"()>4</button></td>
-            <td><button onclick="5"()>5</button></td>
-            <td><button onclick="6"()>6</button></td>
+            <td><button onclick="escribir(1)">1</button></td>
+            <td><button onclick="escribir(2)">2</button></td>
+            <td><button onclick="escribir(3)">3</button></td>
 
 
         </tr>
 
+        <tr>
+            <td><button onclick="escribir(4)">4</button></td>
+            <td><button onclick="escribir(5)">5</button></td>
+            <td><button onclick="escribir(6)">6</button></td>
+
+
+        </tr>
+
 
         <tr>
-            <td><button onclick="7"()>7</button></td>
-            <td><button onclick="8"()>8</button></td>
-            <td><button onclick="9"()>9</button></td>
-            <td><button onclick="0"()>0</button></td>
+            <td><button onclick="escribir(7)" >7</button></td>
+            <td><button onclick="escribir(8)" >8</button></td>
+            <td><button onclick="escribir(9)" >9</button></td>
+            <td><button onclick="escribir(0)" >0</button></td>
+            <td><button onclick="resolver()">=</button></td>
         </tr>
 
         <tr>
 
-            <td><button onclick="limpiar()">C</button></td>
-            <td><button onclick="borrar()">←</button></td>
+            
+            <td><button onclick="borrar('E')">E</button></td>
             <td><button onclick="operar('/')">/</button></td>
             <td><button onclick="operar('*')">*</button></td>
-            <td><button onclick="operar('-') "-></button></td>
+            <td><button onclick="operar('-') ">-</button></td>
             <td><button onclick="operar('+') ">+</button></td>
         </tr>
 
