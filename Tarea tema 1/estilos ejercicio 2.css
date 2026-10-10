@@ -1,0 +1,106 @@
+
+
+/* ESTILOS GENERALES */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* EJERCICIO 2: MENÚS */
+
+
+
+.menu-horizontal,
+.menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.menu-horizontal {
+    display: flex;
+    background-color: #858365;
+    width: fit-content;
+}
+
+
+
+.menu-horizontal a,
+.menu-vertical a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu-horizontal a:hover {
+    background-color: #625f48;
+}
+
+
+
+.menu-vertical {
+    width: 115px;
+}
+
+.menu-vertical li {
+    background-color: #59e82d;
+}
+
+
+
+.menu-vertical li:nth-child(3) {
+    background-color: red;
+}
+
+
+/* EJERCICIO 3: DIV Y SPAN */
+
+
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: #222;
+}
+
+.contenedor {
+    width: min(90vw, 1000px);
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #eeeeee;
+    border-left: 4px solid #111;
+    box-sizing: border-box;
+}
+
+.bloque {
+    background-color: #7b8fa2;
+    color: white;
+    padding: 20px;
+    margin-bottom: 22px;
+    border-radius: 8px;
+}
+
+.bloque h2 {
+    margin-top: 0;
+}
+
+.texto-inferior {
+    background-color: #e8dfa4;
+    padding: 18px;
+    line-height: 1.6;
+    border-radius: 8px;
+}
+
+.resaltado {
+    background-color: pink;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+}
