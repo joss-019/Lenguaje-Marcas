@@ -1,0 +1,534 @@
+
+/* =====================================
+   1. CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #2457a7;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================
+   2. CABECERA Y MENÚ
+===================================== */
+
+.cabecera {
+    background-color: #1e3557;
+    color: white;
+    padding: 15px 0;
+}
+
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.logo span:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo strong {
+    font-size: 18px;
+}
+
+.logo small {
+    font-size: 12px;
+    color: #d6dfec;
+}
+
+.logo-icono {
+    background-color: #ffffff;
+    color: #1e3557;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: #365781;
+}
+
+
+/* =====================================
+   3. PORTADA PRINCIPAL
+===================================== */
+
+.portada {
+    background-color: #dfe8f2;
+    padding: 75px 0;
+}
+
+.portada-contenido {
+    text-align: left;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #1e3557;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.portada h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    color: #1e3557;
+    margin-bottom: 20px;
+}
+
+.portada h1 span {
+    color: #3568a8;
+}
+
+.portada p {
+    max-width: 600px;
+    margin-bottom: 25px;
+    color: #444444;
+    font-size: 17px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton-principal {
+    background-color: #2457a7;
+    color: white;
+}
+
+.boton-secundario {
+    background-color: white;
+    color: #2457a7;
+    border: 1px solid #2457a7;
+}
+
+.boton:hover {
+    opacity: 0.85;
+}
+
+
+/* =====================================
+   4. PRESENTACIÓN
+===================================== */
+
+.presentacion {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.texto-seccion {
+    margin-bottom: 30px;
+}
+
+.subtitulo {
+    display: inline-block;
+    color: #2457a7;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.texto-seccion h2 {
+    color: #1e3557;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.texto-seccion p {
+    color: #555555;
+}
+
+
+/* =====================================
+   5. TARJETAS
+===================================== */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+.icono {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5edf7;
+    color: #2457a7;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: #1e3557;
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.tarjeta p {
+    color: #555555;
+    font-size: 15px;
+}
+
+
+/* =====================================
+   6. SECCIÓN DE EJEMPLOS
+===================================== */
+
+.seccion-ejemplos {
+    background-color: #e9edf2;
+    padding: 55px 0;
+}
+
+.titulo-bloque {
+    color: #1e3557;
+    font-size: 22px;
+    border-bottom: 2px solid #d5dce5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.bloque {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.bloque p {
+    margin-bottom: 12px;
+}
+
+.bloque a {
+    color: #2457a7;
+    font-weight: bold;
+}
+
+.bloque a:hover {
+    text-decoration: underline;
+}
+
+.bloque strong {
+    color: #222222;
+}
+
+.bloque mark {
+    background-color: #fff0a8;
+}
+
+
+/* =====================================
+   7. EJEMPLO DE TÍTULOS
+===================================== */
+
+.ejemplo-titulos {
+    background-color: #f7f8fa;
+    padding: 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+}
+
+.ejemplo-titulos h1,
+.ejemplo-titulos h2,
+.ejemplo-titulos h3,
+.ejemplo-titulos h4,
+.ejemplo-titulos h5,
+.ejemplo-titulos h6 {
+    color: #1e3557;
+    margin-bottom: 8px;
+}
+
+
+/* =====================================
+   8. TEXTOS Y LISTAS
+===================================== */
+
+.rejilla-ejemplos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.lista {
+    padding-left: 25px;
+}
+
+.lista li {
+    margin-bottom: 5px;
+}
+
+.lista li::marker {
+    color: #2457a7;
+}
+
+
+/* =====================================
+   9. TABLA
+===================================== */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1e3557;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f3f7;
+}
+
+
+/* =====================================
+   10. IMAGEN
+===================================== */
+
+.bloque-imagen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+}
+
+.imagen-principal {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   11. PIE DE PÁGINA
+===================================== */
+
+.pie {
+    background-color: #1e3557;
+    color: white;
+}
+
+.pie-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.logo-pie {
+    margin-bottom: 12px;
+}
+
+.pie-contenido p {
+    color: #d6dfec;
+    font-size: 14px;
+}
+
+.contacto h3 {
+    margin-bottom: 10px;
+}
+
+.contacto a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #d6e4ff;
+}
+
+.contacto a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #405675;
+}
+
+.copyright p {
+    color: #d6dfec;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   12. ADAPTACIÓN A TABLETS
+===================================== */
+
+@media (max-width: 800px) {
+
+    .nav-contenedor {
+        flex-direction: column;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bloque-imagen {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================
+   13. ADAPTACIÓN A MÓVILES
+===================================== */
+
+@media (max-width: 550px) {
+
+    .contenedor {
+        width: 92%;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        padding: 7px 9px;
+        font-size: 14px;
+    }
+
+    .portada {
+        padding: 50px 0;
+    }
+
+    .portada h1 {
+        font-size: 34px;
+    }
+
+    .portada p {
+        font-size: 15px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        text-align: center;
+    }
+
+    .presentacion,
+    .seccion-ejemplos {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .texto-seccion h2 {
+        font-size: 26px;
+    }
+
+    .tarjetas,
+    .rejilla-ejemplos {
+        grid-template-columns: 1fr;
+    }
+
+    .bloque,
+    .tarjeta {
+        padding: 18px;
+    }
+
+    .pie-contenido {
+        flex-direction: column;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+}
