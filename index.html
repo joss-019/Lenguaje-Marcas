@@ -1,93 +1,293 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="es">
-  <!-- Información del documento HTML -->
-  <head>
-    <meta charset="UTF-8" />
-    <title>Inicio</title>
 
-    <!-- en esta linea se enlaza el archivo de estilo (CSS)-->
-    <link rel="stylesheet" href="css/estilo.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi primera web de Lenguajes de Marcas">
+    <title>Mi primera WEB | Lenguajes de Marcas</title>
 
-  <!--------BODY--(CUERPO)----------------------------------------------------->
-  <body>
-    <!-- HEADER (ENCABEZADO)-->
-    <header>
-      <h1>Mi primera WEB de Lenguajes de marcas</h1>
-      <h2>Menu:</h2>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="horario.html">Horario</a>
-        <a href="formulario.html">Formulario</a>
-      </nav>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <!-- CABECERA Y MENÚ -->
+    <header class="cabecera">
+        <div class="contenedor nav-contenedor">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icono">W.</span>
+                <span>
+                    <strong>Mi primera WEB</strong>
+                    <small>Lenguajes de Marcas</small>
+                </span>
+            </a>
+
+            <nav class="menu">
+                <a href="index.html" class="activo">Inicio</a>
+                <a href="horario.html">Horario</a>
+                <a href="formulario.html">Formulario</a>
+            </nav>
+
+        </div>
     </header>
 
-    <!-- MAIN (CONTENIDO)-->
+
+    <!-- PORTADA PRINCIPAL -->
     <main>
-      <!-- Títulos -->
-      <h1>Título principal (h1)</h1>
-      <h2>Título secundario (h2)</h2>
-      <h3>Otro título (h3)</h3>
-      <h4>Ejemplo de subtítulo h4</h4>
-      <h5>Ejemplo de subtítulo h5</h5>
-      <h6>Ejemplo de subtítulo h6</h6>
-      
 
-      <!-- Texto -->
-      <p>Este es un párrafo de ejemplo.</p>
+        <section class="portada">
+            <div class="contenedor portada-contenido">
 
-      <p>
-        Texto en <strong>negrita</strong>, texto en <em>cursiva</em>, texto
-        <u>subrayado</u> y texto <mark>resaltado</mark>.
-      </p>
+                <span class="etiqueta">MI PROYECTO WEB</span>
 
-      <ul>
-        <li>Ejemplo de lista: Elemento 1</li>
-        <li>Ejemplo de lista: Elemento 2</li>
-        <li>Ejemplo de lista: Elemento 3</li>
-        <li>Ejemplo de lista: Elemento 4</li>
-      </ul>
-      <p>
-        Ejemplo de enlace:
-        <a href="https://www.google.com">Enlace a Google</a>.
-      </p>
+                <h1>Aprendiendo a crear<br>
+                    <span>páginas web</span>
+                </h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Encabezado 1</th>
-            <th>Encabezado 2</th>
-            <th>Encabezado 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dato 1</td>
-            <td>Dato 2</td>
-            <td>Dato 3</td>
-          </tr>
-          <tr>
-            <td>Dato 4</td>
-            <td>Dato 5</td>
-            <td>Dato 6</td>
-          </tr>
-        </tbody>
-      </table>
+                <p>
+                    Mi primera página web desarrollada con HTML
+                    y CSS para la asignatura de Lenguajes de Marcas.
+                </p>
 
-      <h2>Imagen de ejemplo</h2>
-      <img src="img/imagen.jpg" />
+                <div class="botones">
+                    <a href="#contenido" class="boton boton-principal">
+                        Explorar la página ↓
+                    </a>
+
+                    <a href="horario.html" class="boton boton-secundario">
+                        Ver mi horario
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PRESENTACIÓN -->
+        <section class="presentacion contenedor" id="contenido">
+
+            <div class="texto-seccion">
+                <span class="subtitulo">BIENVENIDO A MI WEB</span>
+                <h2>Un proyecto para aprender</h2>
+                <p>
+                    En esta página estoy practicando diferentes
+                    elementos de HTML y CSS, desde los títulos y
+                    los textos hasta las tablas, las imágenes y
+                    los enlaces.
+                </p>
+            </div>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <div class="icono">01</div>
+                    <h3>HTML</h3>
+                    <p>
+                        La estructura de la página, los títulos,
+                        los párrafos, las listas y las tablas.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono">02</div>
+                    <h3>CSS</h3>
+                    <p>
+                        Los colores, los tamaños, los espacios
+                        y el diseño visual de la web.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="icono">03</div>
+                    <h3>Práctica</h3>
+                    <p>
+                        Una forma de aplicar lo aprendido
+                        y seguir mejorando mis conocimientos.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- EJEMPLOS DE HTML -->
+        <section class="seccion-ejemplos">
+
+            <div class="contenedor">
+
+                <div class="texto-seccion">
+                    <span class="subtitulo">PRÁCTICA DE HTML</span>
+                    <h2>Elementos de una página web</h2>
+                    <p>
+                        Estos son algunos de los elementos
+                        que podemos utilizar al crear una web.
+                    </p>
+                </div>
+
+
+                <!-- TÍTULOS -->
+                <article class="bloque">
+                    <h3 class="titulo-bloque">Jerarquía de títulos</h3>
+
+                    <div class="ejemplo-titulos">
+                        <h1>Título principal (h1)</h1>
+                        <h2>Título secundario (h2)</h2>
+                        <h3>Otro título (h3)</h3>
+                        <h4>Ejemplo de subtítulo h4</h4>
+                        <h5>Ejemplo de subtítulo h5</h5>
+                        <h6>Ejemplo de subtítulo h6</h6>
+                    </div>
+                </article>
+
+
+                <!-- TEXTOS Y LISTAS -->
+                <div class="rejilla-ejemplos">
+
+                    <article class="bloque">
+                        <h3 class="titulo-bloque">Formato de texto</h3>
+
+                        <p>
+                            Este es un párrafo de ejemplo para
+                            mostrar cómo se presenta un texto.
+                        </p>
+
+                        <p>
+                            Texto en <strong>negrita</strong>,
+                            texto en <em>cursiva</em>,
+                            texto <u>subrayado</u> y texto
+                            <mark>resaltado</mark>.
+                        </p>
+
+                        <p>
+                            Enlace externo:
+                            <a href="https://www.google.com"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Visitar Google ↗
+                            </a>
+                        </p>
+                    </article>
+
+
+                    <article class="bloque">
+                        <h3 class="titulo-bloque">Listas en HTML</h3>
+
+                        <p>Ejemplo de una lista de elementos:</p>
+
+                        <ul class="lista">
+                            <li>Primer elemento</li>
+                            <li>Segundo elemento</li>
+                            <li>Tercer elemento</li>
+                            <li>Cuarto elemento</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+
+                <!-- TABLA -->
+                <article class="bloque">
+                    <h3 class="titulo-bloque">Ejemplo de tabla</h3>
+
+                    <p class="descripcion-bloque">
+                        Las tablas permiten organizar datos
+                        en filas y columnas.
+                    </p>
+
+                    <div class="tabla-contenedor">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Encabezado 1</th>
+                                    <th>Encabezado 2</th>
+                                    <th>Encabezado 3</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Dato 1</td>
+                                    <td>Dato 2</td>
+                                    <td>Dato 3</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Dato 4</td>
+                                    <td>Dato 5</td>
+                                    <td>Dato 6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+
+                <!-- IMAGEN -->
+                <article class="bloque bloque-imagen">
+                    <div>
+                        <span class="subtitulo">CONTENIDO VISUAL</span>
+                        <h3 class="titulo-bloque">Una imagen de ejemplo</h3>
+                        <p>
+                            Las imágenes ayudan a dar personalidad
+                            y contenido visual a una página web.
+                        </p>
+                    </div>
+
+                    <img
+                        src="img/imagen.jpg"
+                        alt="Imagen de ejemplo de mi página web"
+                        class="imagen-principal">
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <!-- FOOTER (PIE DE PÁGINA)-->
-    <footer>
-      <p>CIFP Virgen de Gracia</p>
-      <p>
-        Contacto:
-        <a href="mailto:JoseAngel.hc@cifpvirgendegracia.com"
-          >JoseAngel.hc@cifpvirgendegracia.com</a
-        >
-      </p>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+
+        <div class="contenedor pie-contenido">
+
+            <div>
+                <a href="index.html" class="logo logo-pie">
+                    <span class="logo-icono">W.</span>
+                    <span>
+                        <strong>Mi primera WEB</strong>
+                        <small>Lenguajes de Marcas</small>
+                    </span>
+                </a>
+
+                <p>
+                    Proyecto de aprendizaje de HTML y CSS.
+                </p>
+            </div>
+
+            <div class="contacto">
+                <h3>Centro educativo</h3>
+                <p>CIFP Virgen de Gracia</p>
+
+                <a href="mailto:JoseAngel.hc@cifpvirgendegracia.com">
+                    Contactar por correo →
+                </a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>Mi primera WEB · Proyecto educativo</p>
+        </div>
+
     </footer>
+
+</body>
+</html>
     <!--------------------------------------------------------------->
   </body>
 </html>
