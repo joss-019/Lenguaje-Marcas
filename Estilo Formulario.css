@@ -1,0 +1,189 @@
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Cabecera */
+header {
+    background-color: #1e3557;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+/* Menú de navegación */
+.menu {
+    margin: 20px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+.menu a:hover {
+    background-color: #385781;
+    border-radius: 4px;
+}
+
+/* Contenido principal */
+main {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #1e3557;
+    margin-top: 0;
+}
+
+/* Apartados del formulario */
+fieldset {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #1e3557;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+/* Campos de texto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+/* Al seleccionar un campo */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1e3557;
+}
+
+/* Barra de nivel y selector de color */
+input[type="range"],
+input[type="color"],
+input[type="file"] {
+    display: block;
+    margin-top: 8px;
+    max-width: 100%;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* Opciones de respuesta y aficiones */
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.opcion label {
+    margin: 0;
+}
+
+.opcion input {
+    margin: 0;
+}
+
+/* Área de comentarios */
+textarea {
+    resize: vertical;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #1e3557;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #385781;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1e3557;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 10px;
+    }
+
+    .menu a {
+        margin: 4px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+}
