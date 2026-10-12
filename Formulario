@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Formulario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mi Formulario</h1>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <p>Bienvenido a mi formulario</p>
+    </header>
+
+    <main>
+
+        <form action="#" method="post">
+
+            <h2>Formulario de contacto</h2>
+
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="pagina-web">Página web:</label>
+                <input type="url" id="pagina-web" name="pagina-web">
+
+                <label for="buscar">Buscar:</label>
+                <input type="search" id="buscar" name="buscar">
+            </fieldset>
+
+            <fieldset>
+                <legend>Fecha y hora</legend>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Valores numéricos</legend>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad"
+                       min="0" max="120" required>
+
+                <label for="nivel">Nivel:</label>
+                <input type="range" id="nivel" name="nivel"
+                       min="0" max="100">
+
+                <label for="color">Color favorito:</label>
+                <input type="color" id="color" name="color">
+            </fieldset>
+
+            <fieldset>
+                <legend>Opciones</legend>
+
+                <p>¿Te ha gustado la página?</p>
+
+                <div class="opcion">
+                    <input type="radio" id="si" name="respuesta" value="si">
+                    <label for="si">Sí</label>
+                </div>
+
+                <div class="opcion">
+                    <input type="radio" id="no" name="respuesta" value="no">
+                    <label for="no">No</label>
+                </div>
+
+                <div class="opcion">
+                    <input type="radio" id="tal-vez" name="respuesta" value="tal-vez">
+                    <label for="tal-vez">Tal vez</label>
+                </div>
+
+                <p>Selecciona tus aficiones:</p>
+
+                <div class="opcion">
+                    <input type="checkbox" id="videojuegos" name="aficiones" value="videojuegos">
+                    <label for="videojuegos">Videojuegos</label>
+                </div>
+
+                <div class="opcion">
+                    <input type="checkbox" id="musica" name="aficiones" value="musica">
+                    <label for="musica">Música</label>
+                </div>
+
+                <div class="opcion">
+                    <input type="checkbox" id="deporte" name="aficiones" value="deporte">
+                    <label for="deporte">Deporte</label>
+                </div>
+
+                <label for="archivo">Adjuntar archivo:</label>
+                <input type="file" id="archivo" name="archivo">
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentarios</legend>
+
+                <label for="comentarios">Escribe tu mensaje:</label>
+                <textarea id="comentarios" name="comentarios"
+                          rows="5" placeholder="Escribe aquí tus comentarios..."></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Enviar formulario</legend>
+
+                <div class="botones">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar datos">
+                </div>
+            </fieldset>
+
+        </form>
+
+    </main>
+
+    <footer id="contacto">
+        <p>Derechos reservados &copy; 2026</p>
+    </footer>
+
+</body>
+
+</html>
