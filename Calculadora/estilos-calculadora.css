@@ -1,0 +1,142 @@
+/* ==================================================
+   CALCULADORA - estilos.css
+   Diseño sencillo, limpio y adaptable
+   ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: #f2f3f8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #30344b;
+}
+
+/* Contenedor de la calculadora */
+.calculadora {
+    width: 100%;
+    max-width: 340px;
+    padding: 22px;
+    border: 1px solid #e1e3ed;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(32, 43, 91, 0.12);
+}
+
+/* Pantalla: sirve tanto si resultado es input como span */
+#resultado {
+    display: block;
+    width: 100%;
+    min-height: 65px;
+    margin-bottom: 17px;
+    padding: 15px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 10px;
+    background-color: #202b5b;
+    color: #ffffff;
+    font-size: 27px;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+input#resultado {
+    outline: none;
+}
+
+/* Botones organizados en una cuadrícula */
+.calculadora table {
+    width: 100%;
+    border-spacing: 7px;
+    table-layout: fixed;
+}
+
+.calculadora td {
+    width: 25%;
+}
+
+.calculadora button {
+    width: 100%;
+    min-height: 57px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #eef0f6;
+    color: #30344b;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.calculadora button:hover {
+    background-color: #dfe2ef;
+    transform: translateY(-2px);
+}
+
+.calculadora button:active {
+    transform: scale(0.96);
+}
+
+/* Operaciones */
+#division,
+#multiplicacion,
+#resta,
+#suma {
+    background-color: #e9e4fb;
+    color: #6548bd;
+}
+
+#division:hover,
+#multiplicacion:hover,
+#resta:hover,
+#suma:hover {
+    background-color: #d9d0f6;
+}
+
+/* Igual */
+#igual {
+    background-color: #7654d6;
+    color: #ffffff;
+}
+
+#igual:hover {
+    background-color: #6242bd;
+}
+
+/* Borrar */
+#borrar {
+    background-color: #ffe8e5;
+    color: #c45449;
+}
+
+#borrar:hover {
+    background-color: #ffd8d3;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 400px) {
+    body {
+        padding: 15px;
+    }
+
+    .calculadora {
+        padding: 15px;
+    }
+
+    .calculadora button {
+        min-height: 52px;
+        font-size: 18px;
+    }
+
+    #resultado {
+        font-size: 24px;
+    }
+}
