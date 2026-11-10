@@ -1,189 +1,218 @@
-
-/* Estilo general */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-    color: #333;
+/* FORMULARIO - estilo creativo coherente con el portafolio */
+:root {
+    --azul: #202b5b;
+    --violeta: #7654d6;
+    --turquesa: #25b8ad;
+    --coral: #ff806f;
+    --fondo: #f5f6fc;
+    --texto: #30344b;
+    --borde: #e4e6f1;
 }
 
-/* Cabecera */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(37, 184, 173, 0.13), transparent 22%),
+        var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
 header {
-    background-color: #1e3557;
-    color: white;
+    padding: 35px 5%;
+    background: linear-gradient(110deg, var(--azul), #303b78);
+    color: #ffffff;
     text-align: center;
-    padding: 25px;
 }
 
 header h1 {
-    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: clamp(28px, 4vw, 40px);
 }
 
-/* Menú de navegación */
+header p {
+    margin-top: 14px;
+    color: #d8dcf7;
+}
+
 .menu {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .menu a {
-    color: white;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 9px;
+    color: #ffffff;
     text-decoration: none;
-    margin: 0 12px;
-    padding: 8px 12px;
-    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .menu a:hover {
-    background-color: #385781;
-    border-radius: 4px;
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Contenido principal */
 main {
-    max-width: 750px;
-    margin: 30px auto;
-    padding: 0 15px;
+    width: 90%;
+    max-width: 760px;
+    margin: 40px auto;
 }
 
-/* Formulario */
 form {
-    background-color: white;
-    padding: 25px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid var(--borde);
+    border-radius: 17px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 35px rgba(32, 43, 91, 0.10);
 }
 
-h2 {
-    text-align: center;
-    color: #1e3557;
-    margin-top: 0;
+form h2 {
+    margin-bottom: 22px;
+    color: var(--azul);
+    font-size: 27px;
 }
 
-/* Apartados del formulario */
 fieldset {
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    padding: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    padding: 20px;
+    border: 1px solid #dedcf0;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #ffffff, #fafaff);
 }
 
 legend {
-    color: #1e3557;
+    padding: 0 9px;
+    color: var(--violeta);
     font-weight: bold;
-    padding: 0 8px;
 }
 
-/* Etiquetas */
 label {
     display: block;
-    margin-top: 12px;
-    margin-bottom: 6px;
+    margin: 12px 0 5px;
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: bold;
 }
 
-/* Campos de texto */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="url"],
-input[type="search"],
-input[type="number"],
-input[type="date"],
-input[type="time"],
+input:not([type="radio"]):not([type="checkbox"]):not([type="range"]):not([type="color"]),
 textarea {
     width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    font-family: Arial, sans-serif;
+    padding: 11px 12px;
+    border: 1px solid #d8daea;
+    border-radius: 8px;
+    background-color: #fbfbff;
+    color: var(--texto);
+    font: inherit;
 }
 
-/* Al seleccionar un campo */
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #1e3557;
-}
-
-/* Barra de nivel y selector de color */
-input[type="range"],
-input[type="color"],
-input[type="file"] {
-    display: block;
-    margin-top: 8px;
-    max-width: 100%;
+    border-color: var(--violeta);
+    box-shadow: 0 0 0 3px rgba(118, 84, 214, 0.13);
 }
 
 input[type="range"] {
     width: 100%;
+    accent-color: var(--violeta);
 }
 
-/* Opciones de respuesta y aficiones */
+input[type="color"] {
+    width: 55px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
 .opcion {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin: 10px 0;
+    gap: 9px;
+    margin: 8px 0;
 }
 
 .opcion label {
+    display: inline;
     margin: 0;
+    font-weight: normal;
 }
 
 .opcion input {
-    margin: 0;
+    accent-color: var(--violeta);
 }
 
-/* Área de comentarios */
 textarea {
     resize: vertical;
 }
 
-/* Botones */
 .botones {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-input[type="submit"],
-input[type="reset"] {
-    background-color: #1e3557;
-    color: white;
-    border: none;
+.botones input {
     padding: 11px 20px;
-    border-radius: 4px;
+    border: 0;
+    border-radius: 9px;
+    background: linear-gradient(110deg, var(--violeta), #9675ed);
+    color: #ffffff;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #385781;
+.botones input[type="reset"] {
+    background: var(--turquesa);
+    color: #173f48;
 }
 
-/* Pie de página */
+.botones input:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(32, 43, 91, 0.15);
+}
+
 footer {
-    background-color: #1e3557;
-    color: white;
+    padding: 20px;
+    background-color: var(--azul);
+    color: #d8dcf7;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
 }
 
-/* Adaptación a móviles */
-@media (max-width: 600px) {
+@media (max-width: 550px) {
     header {
-        padding: 18px 10px;
+        padding: 28px 4%;
     }
 
-    .menu a {
-        margin: 4px;
+    main {
+        width: 94%;
+        margin: 25px auto;
     }
 
     form {
+        padding: 19px;
+    }
+
+    fieldset {
         padding: 15px;
     }
 
     .botones {
         flex-direction: column;
+    }
+
+    .botones input {
+        width: 100%;
     }
 }

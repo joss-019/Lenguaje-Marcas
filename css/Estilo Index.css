@@ -1,7 +1,24 @@
+/* =====================================================
+   PORTAFOLIO - LENGUAJES DE MARCAS
+   Estilo creativo: azul, violeta y turquesa
+   Hoja externa para index.html
+   ===================================================== */
 
-/* =====================================
-   1. CONFIGURACIÓN GENERAL
-===================================== */
+/* 1. CONFIGURACIÓN GENERAL Y COLORES */
+:root {
+    --azul: #202b5b;
+    --azul-claro: #34458a;
+    --violeta: #7654d6;
+    --turquesa: #25b8ad;
+    --coral: #ff806f;
+    --fondo: #f5f6fc;
+    --blanco: #ffffff;
+    --texto: #30344b;
+    --texto-suave: #69708a;
+    --borde: #e4e6f1;
+    --sombra: 0 10px 30px rgba(32, 43, 91, 0.09);
+    --sombra-hover: 0 16px 35px rgba(32, 43, 91, 0.16);
+}
 
 * {
     margin: 0;
@@ -11,53 +28,55 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 25px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
-    color: #333333;
-    line-height: 1.6;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
 }
 
 a {
+    color: var(--violeta);
     text-decoration: none;
-    color: #2457a7;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 .contenedor {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
-img {
-    max-width: 100%;
-}
-
-
-/* =====================================
-   2. CABECERA Y MENÚ
-===================================== */
-
+/* 2. CABECERA Y MENÚ */
 .cabecera {
-    background-color: #1e3557;
-    color: white;
-    padding: 15px 0;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(110deg, var(--azul), #303b78);
+    color: var(--blanco);
+    padding: 17px 0;
+    box-shadow: 0 4px 18px rgba(22, 30, 68, 0.18);
 }
 
 .nav-contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: white;
+    gap: 12px;
+    color: var(--blanco);
 }
 
 .logo span:last-child {
@@ -67,239 +86,320 @@ img {
 
 .logo strong {
     font-size: 18px;
+    line-height: 1.3;
 }
 
 .logo small {
+    color: #d8dcf7;
     font-size: 12px;
-    color: #d6dfec;
 }
 
 .logo-icono {
-    background-color: #ffffff;
-    color: #1e3557;
-    padding: 8px;
-    border-radius: 5px;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, var(--turquesa), #78e0d5);
+    color: var(--azul);
     font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 14px rgba(37, 184, 173, 0.25);
 }
 
 .menu {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .menu a {
-    color: white;
-    padding: 8px 12px;
-    border-radius: 4px;
+    display: inline-block;
+    color: #f5f6ff;
+    padding: 9px 15px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .menu a:hover,
 .menu a.activo {
-    background-color: #365781;
+    color: var(--blanco);
+    background-color: rgba(255, 255, 255, 0.13);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-
-/* =====================================
-   3. PORTADA PRINCIPAL
-===================================== */
-
+/* 3. PORTADA PRINCIPAL */
 .portada {
-    background-color: #dfe8f2;
-    padding: 75px 0;
+    position: relative;
+    overflow: hidden;
+    padding: 88px 0 92px;
+    background:
+        radial-gradient(circle at 88% 20%, rgba(37, 184, 173, 0.22), transparent 22%),
+        radial-gradient(circle at 8% 90%, rgba(118, 84, 214, 0.16), transparent 25%),
+        linear-gradient(125deg, #e9eafd, #f3f8ff 58%, #e3f7f4);
+}
+
+.portada::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    right: 8%;
+    bottom: -115px;
+    border: 25px solid rgba(118, 84, 214, 0.10);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .portada-contenido {
+    position: relative;
+    z-index: 1;
     text-align: left;
 }
 
 .etiqueta {
     display: inline-block;
-    background-color: #1e3557;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+    padding: 7px 14px;
+    border: 1px solid rgba(118, 84, 214, 0.2);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: var(--violeta);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 
 .portada h1 {
-    font-size: 46px;
-    line-height: 1.2;
-    color: #1e3557;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+    color: var(--azul);
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.13;
+    letter-spacing: -1.5px;
 }
 
 .portada h1 span {
-    color: #3568a8;
+    color: var(--violeta);
 }
 
 .portada p {
-    max-width: 600px;
-    margin-bottom: 25px;
-    color: #444444;
+    max-width: 620px;
+    margin-bottom: 28px;
+    color: #555d7b;
     font-size: 17px;
 }
 
 .botones {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 13px;
 }
 
 .boton {
     display: inline-block;
-    padding: 10px 18px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
     font-weight: bold;
-}
-
-.boton-principal {
-    background-color: #2457a7;
-    color: white;
-}
-
-.boton-secundario {
-    background-color: white;
-    color: #2457a7;
-    border: 1px solid #2457a7;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
 .boton:hover {
-    opacity: 0.85;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(32, 43, 91, 0.16);
 }
 
+.boton-principal {
+    background: linear-gradient(110deg, var(--violeta), #9675ed);
+    color: var(--blanco);
+}
 
-/* =====================================
-   4. PRESENTACIÓN
-===================================== */
+.boton-principal:hover {
+    color: var(--blanco);
+    background: linear-gradient(110deg, #6240c2, var(--violeta));
+}
 
+.boton-secundario {
+    border-color: #c9c2ee;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--azul);
+}
+
+.boton-secundario:hover {
+    border-color: var(--turquesa);
+    background-color: var(--blanco);
+    color: var(--azul);
+}
+
+/* 4. PRESENTACIÓN */
 .presentacion {
-    padding-top: 55px;
-    padding-bottom: 55px;
+    padding-top: 68px;
+    padding-bottom: 70px;
 }
 
 .texto-seccion {
-    margin-bottom: 30px;
+    max-width: 720px;
+    margin-bottom: 32px;
 }
 
 .subtitulo {
     display: inline-block;
-    color: #2457a7;
-    font-size: 12px;
-    font-weight: bold;
     margin-bottom: 8px;
+    color: var(--violeta);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
 }
 
 .texto-seccion h2 {
-    color: #1e3557;
-    font-size: 30px;
     margin-bottom: 12px;
+    color: var(--azul);
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.25;
 }
 
 .texto-seccion p {
-    color: #555555;
+    color: var(--texto-suave);
 }
 
-
-/* =====================================
-   5. TARJETAS
-===================================== */
-
+/* 5. TARJETAS */
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
 .tarjeta {
-    background-color: white;
-    padding: 25px;
-    border: 1px solid #dddddd;
-    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    padding: 27px;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--violeta);
+}
+
+.tarjeta:nth-child(2)::before {
+    background: var(--turquesa);
+}
+
+.tarjeta:nth-child(3)::before {
+    background: var(--coral);
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    border-color: #d4d0f2;
+    box-shadow: var(--sombra-hover);
 }
 
 .icono {
-    width: 45px;
-    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e5edf7;
-    color: #2457a7;
-    border-radius: 5px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 17px;
+    border-radius: 14px;
+    background-color: #eeeafd;
+    color: var(--violeta);
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 15px;
+}
+
+.tarjeta:nth-child(2) .icono {
+    background-color: #e2f8f5;
+    color: #168e85;
+}
+
+.tarjeta:nth-child(3) .icono {
+    background-color: #fff0ed;
+    color: #df695b;
 }
 
 .tarjeta h3 {
-    color: #1e3557;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    color: var(--azul);
     font-size: 21px;
 }
 
 .tarjeta p {
-    color: #555555;
+    color: var(--texto-suave);
     font-size: 15px;
 }
 
-
-/* =====================================
-   6. SECCIÓN DE EJEMPLOS
-===================================== */
-
+/* 6. SECCIÓN DE EJEMPLOS */
 .seccion-ejemplos {
-    background-color: #e9edf2;
-    padding: 55px 0;
+    padding: 68px 0;
+    background:
+        radial-gradient(circle at 95% 5%, rgba(37, 184, 173, 0.09), transparent 20%),
+        #eceefa;
 }
 
 .titulo-bloque {
-    color: #1e3557;
-    font-size: 22px;
-    border-bottom: 2px solid #d5dce5;
-    padding-bottom: 10px;
     margin-bottom: 20px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #e7e3f8;
+    color: var(--azul);
+    font-size: 22px;
 }
 
 .bloque {
-    background-color: white;
-    border: 1px solid #dddddd;
-    border-radius: 6px;
-    padding: 25px;
     margin-bottom: 25px;
+    padding: 27px;
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
 }
 
 .bloque p {
     margin-bottom: 12px;
+    color: #555d75;
 }
 
 .bloque a {
-    color: #2457a7;
+    color: var(--violeta);
     font-weight: bold;
 }
 
 .bloque a:hover {
+    color: #4930a5;
     text-decoration: underline;
 }
 
 .bloque strong {
-    color: #222222;
+    color: var(--azul);
 }
 
 .bloque mark {
-    background-color: #fff0a8;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background-color: #fff0b8;
+    color: #5c4b13;
 }
 
-
-/* =====================================
-   7. EJEMPLO DE TÍTULOS
-===================================== */
-
+/* 7. EJEMPLO DE TÍTULOS */
 .ejemplo-titulos {
-    background-color: #f7f8fa;
-    padding: 20px;
-    border: 1px solid #eeeeee;
-    border-radius: 4px;
+    padding: 22px;
+    border: 1px solid #e5e3f3;
+    border-radius: 11px;
+    background: linear-gradient(120deg, #f7f6ff, #f1fbfa);
 }
 
 .ejemplo-titulos h1,
@@ -308,15 +408,23 @@ img {
 .ejemplo-titulos h4,
 .ejemplo-titulos h5,
 .ejemplo-titulos h6 {
-    color: #1e3557;
     margin-bottom: 8px;
+    color: var(--azul);
 }
 
+.ejemplo-titulos h1 {
+    font-size: 30px;
+}
 
-/* =====================================
-   8. TEXTOS Y LISTAS
-===================================== */
+.ejemplo-titulos h2 {
+    font-size: 25px;
+}
 
+.ejemplo-titulos h3 {
+    font-size: 21px;
+}
+
+/* 8. TEXTOS Y LISTAS */
 .rejilla-ejemplos {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -328,124 +436,131 @@ img {
 }
 
 .lista li {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+    padding-left: 4px;
+    color: var(--texto-suave);
 }
 
 .lista li::marker {
-    color: #2457a7;
+    color: var(--turquesa);
 }
 
-
-/* =====================================
-   9. TABLA
-===================================== */
-
+/* 9. TABLA */
 .tabla-contenedor {
     width: 100%;
     overflow-x: auto;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
+    background-color: var(--blanco);
 }
 
 th,
 td {
-    border: 1px solid #cccccc;
-    padding: 12px;
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--borde);
     text-align: left;
 }
 
 th {
-    background-color: #1e3557;
-    color: white;
+    background: linear-gradient(100deg, var(--azul), #414e91);
+    color: var(--blanco);
+    font-size: 14px;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f0f3f7;
+    background-color: #f5f5fc;
 }
 
+tbody tr:hover {
+    background-color: #e9f8f6;
+}
 
-/* =====================================
-   10. IMAGEN
-===================================== */
-
+/* 10. BLOQUE DE IMAGEN */
 .bloque-imagen {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 25px;
+    gap: 28px;
 }
 
 .imagen-principal {
     width: 100%;
     max-height: 320px;
+    border: 5px solid var(--blanco);
+    border-radius: 14px;
     object-fit: cover;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
+    box-shadow: 0 9px 24px rgba(32, 43, 91, 0.15);
+    transition: transform 0.3s ease;
 }
 
+.imagen-principal:hover {
+    transform: scale(1.02);
+}
 
-/* =====================================
-   11. PIE DE PÁGINA
-===================================== */
-
+/* 11. PIE DE PÁGINA */
 .pie {
-    background-color: #1e3557;
-    color: white;
+    background: linear-gradient(110deg, #202b5b, #303b78);
+    color: var(--blanco);
 }
 
 .pie-contenido {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    gap: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .logo-pie {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 
 .pie-contenido p {
-    color: #d6dfec;
+    color: #d8dcf7;
     font-size: 14px;
 }
 
 .contacto h3 {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    color: #ffffff;
 }
 
 .contacto a {
     display: inline-block;
-    margin-top: 8px;
-    color: #d6e4ff;
+    margin-top: 9px;
+    color: #8fe5dc;
+    font-weight: bold;
 }
 
 .contacto a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .copyright {
-    text-align: center;
     padding: 15px;
-    border-top: 1px solid #405675;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
 }
 
 .copyright p {
-    color: #d6dfec;
+    color: #d8dcf7;
     font-size: 13px;
 }
 
+/* 12. ACCESIBILIDAD: FOCO DE TECLADO */
+a:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 4px;
+}
 
-/* =====================================
-   12. ADAPTACIÓN A TABLETS
-===================================== */
-
+/* 13. ADAPTACIÓN A TABLETS */
 @media (max-width: 800px) {
-
     .nav-contenedor {
         flex-direction: column;
     }
@@ -458,35 +573,37 @@ tbody tr:nth-child(even) {
         grid-template-columns: 1fr;
     }
 
+    .portada {
+        padding: 70px 0;
+    }
 }
 
-
-/* =====================================
-   13. ADAPTACIÓN A MÓVILES
-===================================== */
-
+/* 14. ADAPTACIÓN A MÓVILES */
 @media (max-width: 550px) {
-
     .contenedor {
         width: 92%;
     }
 
+    .cabecera {
+        padding: 14px 0;
+    }
+
     .menu {
-        flex-wrap: wrap;
         justify-content: center;
+        gap: 5px;
     }
 
     .menu a {
-        padding: 7px 9px;
-        font-size: 14px;
+        padding: 8px 10px;
+        font-size: 13px;
     }
 
     .portada {
-        padding: 50px 0;
+        padding: 55px 0;
     }
 
     .portada h1 {
-        font-size: 34px;
+        font-size: 35px;
     }
 
     .portada p {
@@ -495,6 +612,7 @@ tbody tr:nth-child(even) {
 
     .botones {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .boton {
@@ -503,8 +621,8 @@ tbody tr:nth-child(even) {
 
     .presentacion,
     .seccion-ejemplos {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 45px;
+        padding-bottom: 45px;
     }
 
     .texto-seccion h2 {
@@ -518,11 +636,12 @@ tbody tr:nth-child(even) {
 
     .bloque,
     .tarjeta {
-        padding: 18px;
+        padding: 20px;
     }
 
     .pie-contenido {
         flex-direction: column;
+        gap: 25px;
     }
 
     th,
@@ -530,5 +649,18 @@ tbody tr:nth-child(even) {
         padding: 9px;
         font-size: 13px;
     }
+}
 
+/* 15. RESPETAR LA PREFERENCIA DE MOVIMIENTO REDUCIDO */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
