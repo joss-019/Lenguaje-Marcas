@@ -1,86 +1,100 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <title>Calculadora</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="estilos-calculadora.css">
-    <script src="Calculadora.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora</title>
+
+   
     <link rel="stylesheet" href="../css/Estilo%20Index.css">
-<script src="../modoOscuro/tema.js" defer></script>
+
+    
+    <link rel="stylesheet" href="estilos-calculadora.css">
+
+    
+    <script src="../modoOscuro/tema.js" defer></script>
+    <script src="Calculadora.js" defer></script>
 </head>
-<header>
-    
-<header class="cabecera">
-    <div class="contenedor nav-contenedor">
 
-        <a href="../index.html" class="logo">
-            <span class="logo-icono">W.</span>
-            <span>
-                <strong>Mi primera WEB</strong>
-                <small>Lenguajes de Marcas</small>
-            </span>
-        </a>
-
-        <nav class="menu">
-            <button type="button" id="botonTema" class="boton boton-secundario">
-                Modo oscuro
-            </button>
-
-            <a href="../index.html">Inicio</a>
-            <a href="../Horario1.html">Horario</a>
-            <a href="../Formulario.html">Formulario</a>
-            <a href="./Calculadora.html" class="activo">Calculadora</a>
-            <a href="../Juego/juego.html" class="boton boton-principal">Piedra, papel o tijera</a>
-        </nav>
-
-    </div>
-</header>
-
-    <h1>Calculadora</h1>
-</header>
 <body>
-<main class="Calculadora">
-    
-    <table>
-        <tr>
-            <td colspan="4">
-                <input type="text" id="pantalla" readonly>
-            </td>
-        </tr>
-        <tr>
-            <td><button onclick="escribir(1)">1</button></td>
-            <td><button onclick="escribir(2)">2</button></td>
-            <td><button onclick="escribir(3)">3</button></td>
 
+   
+    <header class="cabecera">
+        <div class="contenedor nav-contenedor">
 
-        </tr>
+            <a href="../index.html" class="logo">
+                <span class="logo-icono">W.</span>
+                <span>
+                    <strong>Mi primera WEB</strong>
+                    <small>Lenguajes de Marcas</small>
+                </span>
+            </a>
 
-        <tr>
-            <td><button onclick="escribir(4)">4</button></td>
-            <td><button onclick="escribir(5)">5</button></td>
-            <td><button onclick="escribir(6)">6</button></td>
+            <nav class="menu">
 
+                <button type="button" id="botonTema" class="boton boton-secundario">
+                    Modo oscuro
+                </button>
 
-        </tr>
+                <a href="../index.html">Inicio</a>
+                <a href="../Horario1.html">Horario</a>
+                <a href="../Formulario.html">Formulario</a>
+                <a href="./Calculadora.html" class="activo">Calculadora</a>
+                <a href="../Juego/juego.html" class="boton boton-principal">
+                    Piedra, papel o tijera
+                </a>
 
+            </nav>
+        </div>
+    </header>
 
-        <tr>
-            <td><button onclick="escribir(7)" >7</button></td>
-            <td><button onclick="escribir(8)" >8</button></td>
-            <td><button onclick="escribir(9)" >9</button></td>
-            <td><button onclick="escribir(0)" >0</button></td>
-            <td><button onclick="resolver()">=</button></td>
-        </tr>
+    <!-- CONTENIDO DE LA CALCULADORA -->
+    <main class="Calculadora">
 
-        <tr>
+        <h1>Calculadora</h1>
 
-            
-            <td><button onclick="borrar('E')">E</button></td>
-            <td><button onclick="operar('/')">/</button></td>
-            <td><button onclick="operar('*')">*</button></td>
-            <td><button onclick="operar('-') ">-</button></td>
-            <td><button onclick="operar('+') ">+</button></td>
-        </tr>
+        <table>
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="pantalla" readonly>
+                </td>
+            </tr>
 
+            <tr>
+                <td><button type="button" onclick="escribir(7)">7</button></td>
+                <td><button type="button" onclick="escribir(8)">8</button></td>
+                <td><button type="button" onclick="escribir(9)">9</button></td>
+                <td><button type="button" onclick="operar('/')">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" onclick="escribir(4)">4</button></td>
+                <td><button type="button" onclick="escribir(5)">5</button></td>
+                <td><button type="button" onclick="escribir(6)">6</button></td>
+                <td><button type="button" onclick="operar('*')">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" onclick="escribir(1)">1</button></td>
+                <td><button type="button" onclick="escribir(2)">2</button></td>
+                <td><button type="button" onclick="escribir(3)">3</button></td>
+                <td><button type="button" onclick="operar('-')">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button type="button" onclick="escribir(0)">0</button></td>
+                <td><button type="button" onclick="borrar()">E</button></td>
+                <td><button type="button" onclick="resolver()">=</button></td>
+                <td><button type="button" onclick="operar('+')">+</button></td>
+            </tr>
+        </table>
+
+    </main>
+
+</body>
+</html>
 
     
