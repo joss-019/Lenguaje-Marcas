@@ -4,31 +4,33 @@
 function PiedraPapelTijera(jugador, maquina) {
 
     if (jugador === maquina) {
-        console.log("Empate");
-        alert("Empate");
+        return "¡Empate!";
+    }
 
-    } else if (
-        jugador == "piedra" && maquina == "tijera" ||
-        jugador == "papel" && maquina == "piedra" ||
-        jugador == "tijera" && maquina == "papel"
+    else if (
+        (jugador === "piedra" && maquina === "tijera") ||
+        (jugador === "papel" && maquina === "piedra") ||
+        (jugador === "tijera" && maquina === "papel")
     ) {
-        console.log("Gana jugador");
-        alert("Gana jugador");
+        return "¡Has ganado!";
+    }
 
-    } else {
-        console.log("Gana maquina");
-        alert("Gana maquina");
+    else {
+        return "Ha ganado la máquina.";
     }
 }
 
 
-function GanaJugador() {
-
-    let jugador = document.getElementById("pantalla").value;
+function jugar(jugador) {
 
     let opciones = ["piedra", "papel", "tijera"];
 
     let maquina = opciones[Math.floor(Math.random() * opciones.length)];
 
-    PiedraPapelTijera(jugador, maquina);
+    let resultado = PiedraPapelTijera(jugador, maquina);
+
+    document.getElementById("resultado").textContent =
+        "Tú: " + jugador +
+        " | Máquina: " + maquina +
+        " | " + resultado;
 }
