@@ -648,6 +648,8 @@ a:focus-visible {
 }
 
 
+
+/* REDUCIR ANIMACIONES */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -659,7 +661,12 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
-   /* MODO OSCURO */
+}
+
+
+/* ==================================================
+   MODO OSCURO
+   ================================================== */
 
 .modo-oscuro {
     --fondo: #151827;
@@ -676,29 +683,51 @@ a:focus-visible {
     background: linear-gradient(125deg, #20263c, #1b2435);
 }
 
+.modo-oscuro .portada h1,
+.modo-oscuro .texto-seccion h2,
+.modo-oscuro .tarjeta h3,
+.modo-oscuro .titulo-bloque,
+.modo-oscuro .bloque strong {
+    color: #edf0ff;
+}
+
+.modo-oscuro .portada p,
+.modo-oscuro .texto-seccion p,
+.modo-oscuro .bloque p,
+.modo-oscuro .lista li {
+    color: #b5bdd5;
+}
+
 .modo-oscuro .seccion-ejemplos {
     background: #1b2031;
 }
 
 .modo-oscuro .tarjeta,
-.modo-oscuro .bloque,
-.modo-oscuro table {
-    background-color: var(--blanco);
-    border-color: var(--borde);
+.modo-oscuro .bloque {
+    background-color: #22283b;
+    border-color: #39415a;
 }
 
-.modo-oscuro .texto-seccion p,
-.modo-oscuro .bloque p,
-.modo-oscuro .lista li {
-    color: var(--texto-suave);
+.modo-oscuro .ejemplo-titulos {
+    background: #292f45;
+    border-color: #39415a;
+}
+
+.modo-oscuro table {
+    background-color: #22283b;
 }
 
 .modo-oscuro tbody tr:nth-child(even) {
     background-color: #292f45;
 }
 
+.modo-oscuro tbody tr:hover {
+    background-color: #343d56;
+}
+
 .modo-oscuro .boton-secundario {
     background-color: #30364d;
     color: white;
+    border-color: #59617c;
 }
 }
