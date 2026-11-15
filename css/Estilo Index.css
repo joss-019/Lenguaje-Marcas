@@ -1,8 +1,4 @@
-/* =====================================================
-   PORTAFOLIO - LENGUAJES DE MARCAS
-   Estilo creativo: azul, violeta y turquesa
-   Hoja externa para index.html
-   ===================================================== */
+
 
 /* 1. CONFIGURACIÓN GENERAL Y COLORES */
 :root {
@@ -553,13 +549,13 @@ tbody tr:hover {
     font-size: 13px;
 }
 
-/* 12. ACCESIBILIDAD: FOCO DE TECLADO */
+
 a:focus-visible {
     outline: 3px solid var(--coral);
     outline-offset: 4px;
 }
 
-/* 13. ADAPTACIÓN A TABLETS */
+
 @media (max-width: 800px) {
     .nav-contenedor {
         flex-direction: column;
@@ -578,7 +574,7 @@ a:focus-visible {
     }
 }
 
-/* 14. ADAPTACIÓN A MÓVILES */
+
 @media (max-width: 550px) {
     .contenedor {
         width: 92%;
@@ -651,7 +647,7 @@ a:focus-visible {
     }
 }
 
-/* 15. RESPETAR LA PREFERENCIA DE MOVIMIENTO REDUCIDO */
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -663,4 +659,46 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
+   /* MODO OSCURO */
+
+.modo-oscuro {
+    --fondo: #151827;
+    --blanco: #22283b;
+    --texto: #edf0ff;
+    --texto-suave: #b5bdd5;
+    --borde: #39415a;
+
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+.modo-oscuro .portada {
+    background: linear-gradient(125deg, #20263c, #1b2435);
+}
+
+.modo-oscuro .seccion-ejemplos {
+    background: #1b2031;
+}
+
+.modo-oscuro .tarjeta,
+.modo-oscuro .bloque,
+.modo-oscuro table {
+    background-color: var(--blanco);
+    border-color: var(--borde);
+}
+
+.modo-oscuro .texto-seccion p,
+.modo-oscuro .bloque p,
+.modo-oscuro .lista li {
+    color: var(--texto-suave);
+}
+
+.modo-oscuro tbody tr:nth-child(even) {
+    background-color: #292f45;
+}
+
+.modo-oscuro .boton-secundario {
+    background-color: #30364d;
+    color: white;
+}
 }
