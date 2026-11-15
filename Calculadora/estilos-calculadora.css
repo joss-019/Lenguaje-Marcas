@@ -1,8 +1,6 @@
-/* ==================================================
-   CALCULADORA - estilos.css
-   Diseño sencillo, limpio y adaptable
-   ================================================== */
 
+
+/* Configuración general */
 * {
     margin: 0;
     padding: 0;
@@ -11,62 +9,63 @@
 
 body {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
     background-color: #f2f3f8;
     font-family: Arial, Helvetica, sans-serif;
     color: #30344b;
 }
 
 /* Contenedor de la calculadora */
-.calculadora {
+.Calculadora {
     width: 100%;
-    max-width: 340px;
-    padding: 22px;
+    max-width: 380px;
+    margin: 60px auto;
+    padding: 25px;
     border: 1px solid #e1e3ed;
     border-radius: 16px;
     background-color: #ffffff;
     box-shadow: 0 8px 25px rgba(32, 43, 91, 0.12);
 }
 
-/* Pantalla: sirve tanto si resultado es input como span */
-#resultado {
-    display: block;
-    width: 100%;
-    min-height: 65px;
-    margin-bottom: 17px;
-    padding: 15px;
-    overflow: hidden;
-    border: 0;
-    border-radius: 10px;
-    background-color: #202b5b;
-    color: #ffffff;
-    font-size: 27px;
-    text-align: right;
-    overflow-wrap: anywhere;
+/* Título */
+.Calculadora h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: #30344b;
 }
 
-input#resultado {
-    outline: none;
-}
-
-/* Botones organizados en una cuadrícula */
-.calculadora table {
+/* Tabla */
+.Calculadora table {
     width: 100%;
     border-spacing: 7px;
     table-layout: fixed;
 }
 
-.calculadora td {
+/* Celdas */
+.Calculadora td {
     width: 25%;
 }
 
-.calculadora button {
+/* Pantalla */
+#pantalla {
+    width: 100%;
+    height: 65px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #202b5b;
+    color: #ffffff;
+    font-size: 27px;
+    text-align: right;
+    outline: none;
+}
+
+/* Botones */
+.Calculadora button {
     width: 100%;
     min-height: 57px;
-    border: 0;
+    border: none;
     border-radius: 10px;
     background-color: #eef0f6;
     color: #30344b;
@@ -76,67 +75,32 @@ input#resultado {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.calculadora button:hover {
+/* Efecto al pasar el ratón */
+.Calculadora button:hover {
     background-color: #dfe2ef;
     transform: translateY(-2px);
 }
 
-.calculadora button:active {
+/* Efecto al pulsar */
+.Calculadora button:active {
     transform: scale(0.96);
-}
-
-/* Operaciones */
-#division,
-#multiplicacion,
-#resta,
-#suma {
-    background-color: #e9e4fb;
-    color: #6548bd;
-}
-
-#division:hover,
-#multiplicacion:hover,
-#resta:hover,
-#suma:hover {
-    background-color: #d9d0f6;
-}
-
-/* Igual */
-#igual {
-    background-color: #7654d6;
-    color: #ffffff;
-}
-
-#igual:hover {
-    background-color: #6242bd;
-}
-
-/* Borrar */
-#borrar {
-    background-color: #ffe8e5;
-    color: #c45449;
-}
-
-#borrar:hover {
-    background-color: #ffd8d3;
 }
 
 /* Adaptación a pantallas pequeñas */
 @media (max-width: 400px) {
-    body {
+
+    .Calculadora {
+        margin: 35px auto;
         padding: 15px;
     }
 
-    .calculadora {
-        padding: 15px;
-    }
-
-    .calculadora button {
+    .Calculadora button {
         min-height: 52px;
         font-size: 18px;
     }
 
-    #resultado {
+    #pantalla {
         font-size: 24px;
     }
 }
+
