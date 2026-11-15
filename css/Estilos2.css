@@ -115,4 +115,12 @@ tbody td:hover {
     table {
         min-width: 720px;
     }
+   
+body {
+    padding: 0;
+}
+
+main {
+    margin: 40px auto;
+}
 }
