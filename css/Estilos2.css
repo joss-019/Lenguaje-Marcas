@@ -123,4 +123,29 @@ body {
 main {
     margin: 40px auto;
 }
+    /* MODO OSCURO DEL HORARIO */
+
+body.modo-oscuro {
+    background: #151827;
+    color: #edf0ff;
+}
+
+body.modo-oscuro main {
+    background-color: #22283b;
+    border-color: #39415a;
+}
+
+body.modo-oscuro h1 {
+    color: #edf0ff;
+}
+
+body.modo-oscuro td {
+    background-color: #30364d;
+    color: #edf0ff;
+}
+
+body.modo-oscuro td:first-child {
+    background-color: #39415a;
+    color: #ffffff;
+}
 }
